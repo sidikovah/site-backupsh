@@ -1,8 +1,8 @@
 #!/bin/bash
 
-export PGPASSWORD='CMWVKR8vLntaRDA9'
+export PGPASSWORD=''
 
-PROJNAME=psql-p-cloud                   # Название бэкап проекта.
+PROJNAME=                 # Название бэкап проекта.
 PORT=6432                    # Кодировка базы данных (utf8).
 DBNAME=c_cloud                # Имя базы данных для резервного копирования.
 DBNAME1=keycloak                   # Имя базы данных для резервного копирования.
@@ -10,7 +10,7 @@ DBFILENAME=c_cloud                 # Имя дампа базы данных.
 DBFILENAME1=keycloak                  # Имя дампа базы данных.
 ARFILENAME=c_cloud                 # Имя архива с файлами.
 ARFILENAME1=keycloak                # Имя архива с файлами.
-HOST=10.202.0.27                     # Хост PSQL.
+HOST=                 # Хост PSQL.
 USER=backup                       # Имя пользователя базы данных.
 DATADIR=/mnt/backup/              #Путь к каталогу где будут храниться резервные копии.
 SRCFILES=/mnt/backup/                  # Путь к каталогу файлов для архивирования.
@@ -60,8 +60,8 @@ echo "[++--------][`date +%F--%H-%M`] Делаем очистку файлов..
 
 # Отправляем уведомление в Telegram
 
-TOKEN=6802282738:AAE2sYHKax2RUVbKd06ZwpSV9kKRvjJc0yo # Token telegram бота (получаем у @Botfather)
-CHAT_ID=-4074720850 # ID чата куда отправлять сообщение
+TOKEN= # Token telegram бота (получаем у @Botfather)
+CHAT_ID= # ID чата куда отправлять сообщение
 MESSAGE="[`date +%F-%H-%M`]%0AСоздание резервной копии [$PROJNAME] успешно.%0AСвободное место на диске: `df -h /dev/sdb1|tail -n1|awk '{print $4}'`%0AОбщий вес каталога: `du -h $DATADIR | tail -n1`"
 URL="https://api.telegram.org/bot$TOKEN/sendMessage"
 
