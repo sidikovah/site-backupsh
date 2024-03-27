@@ -58,8 +58,8 @@ echo "[++--------][`date +%F--%H-%M`] Делаем очистку файлов..
 
 # Отправляем уведомление в Telegram
 
-TOKEN=6943174649:AAHTsuhIR7cr6omNdsMoPW4aD3WOJ9v9LXY # Token telegram бота (получаем у @Botfather)
-CHAT_ID=-4129340796 # ID чата куда отправлять сообщение
+TOKEN= # Token telegram бота (получаем у @Botfather)
+CHAT_ID= # ID чата куда отправлять сообщение
 MESSAGE="[`date +%F-%H-%M`]%0AСоздание резервной копии [$PROJNAME] успешно.%0AСвободное место на диске: `df -h /dev/sdb1|tail -n1|awk '{print $4}'`%0AОбщий вес каталога: `du -h $DATADIR | tail -n1`"
 URL="https://api.telegram.org/bot$TOKEN/sendMessage"
 
